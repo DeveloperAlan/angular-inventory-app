@@ -8,5 +8,18 @@ import { Product } from './product.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-inventory-app';
+  product: Product;
+
+  constructor() {
+    let newProduct = new Product(
+      'NICEHAT',
+      'A Nice Blake Hat',
+      '/resources/images/products/black-hat.jpg',
+      ['Men', 'Accessories', 'Hats'],
+      29.99
+    );
+
+    this.product = newProduct;
+  }
+
 }
