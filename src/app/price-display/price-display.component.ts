@@ -1,11 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { 
+  Component,
+  Input
+} from '@angular/core';
 
 @Component({
-  selector: 'app-price-display',
+  selector: 'price-display',
   templateUrl: './price-display.component.html',
   styleUrls: ['./price-display.component.css']
 })
-export class PriceDisplayComponent implements OnInit {
+export class PriceDisplayComponent {
+
+  @Input() price: number;
 
   constructor() { }
 
